@@ -12,9 +12,4 @@ else{
    echo "connect!";
 }
 
-
-
 ?>
-
-
-
