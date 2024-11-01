@@ -1,6 +1,7 @@
 <?php
 // Connect to the database
-include 'database_connection/database.php';
+require($_SERVER['DOCUMENT_ROOT'] . "/stock/db/database.php");
+
 
 if (isset($_POST['submit'])) {
     // Database insert
@@ -14,7 +15,7 @@ if (isset($_POST['submit'])) {
     $expiryDate = $_POST['expiryDate'];
 
     // Updated SQL query to match database column names
-    $sql = "INSERT INTO `crud`(product_name, Product_ID, SKU, Quantity, Price, Category, Manufacture_date, Expire_date)
+    $sql = "INSERT INTO `crud`(productname, productid, SKU, quantity, productPrice, category, manufactureDate, expiryDate)
             VALUES ('$productname', '$productid', '$SKU', '$quantity', '$productPrice', '$category', '$manufactureDate', '$expiryDate')";
 
     // Execute query and check for success
